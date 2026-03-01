@@ -1,18 +1,10 @@
-// "postId": 1,
-// "id": 1,
-// "name": "id labore ex et quam laborum",
-// "email": "Eliseo@gardner.biz",
-// "body": "laudantium enim quasi est quidem magnam voluptate ipsam eos tempora quo necessitatibus dolor quam autem quasi reiciendis et nam sapiente accusantium"
 
-const loadComments = () => {
+const loadComments = async() => {
   const url = "https://jsonplaceholder.typicode.com/comments";
-  fetch(url)
-    .then((res) => res.json())
-    .then((data) => {
+  const res=await fetch(url);
+  const data = await res.json();
       displayComments(data);
-      document.getElementById("total-comments").innerText = data.length;
-    });
-};
+ document.getElementById("total-comments").innerText = data.length;};
 
 const displayComments = (comments) => {
   const commentContainer = document.getElementById("comment-container");
