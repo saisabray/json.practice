@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning Json</title>
+    <style>
+      section {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      div {
+        border: 1px solid black;
+        padding: 10px 20px;
+      }
+      h3 {
+        color: rgba(32, 27, 171, 0.532);
+        font-weight: 600;
+        font-size: 24px;
+      }
+      p {
+        color: gray;
+        font-size: 16px;
+      }
+      span {
+        font-weight: 500;
+        font-size: 16px;
+        color: blue;
+      }
+      #count-container {
+        border: 1px solid green;
+        padding: 30px;
+        margin-bottom: 20px;
+        width: fit-content;
+      }
+      #total-comments {
+        color: green;
+        font-weight: 600;
+        font-size: 36px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="count-container">
+      <h2>Total Comments</h2>
+      <span id="total-comments">0</span>
+    </section>
+
+    <section id="comment-container"></section>
+    <script src="json.js"></script>
+  </body>
+</html>
